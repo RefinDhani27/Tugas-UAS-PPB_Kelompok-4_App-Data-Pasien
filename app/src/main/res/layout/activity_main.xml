@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:src="@drawable/logo"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang"
+                android:textSize="22sp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Di Aplikasi Kelola Pasien."
+                android:textSize="17sp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="4dp"
+        android:background="@color/green"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="550px"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_search"
+            android:drawablePadding="10dp"
+            android:hint="Cari Data Pasien"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/rounded_edittext"
+            android:iconifiedByDefault="false" />
+        <TextView
+            android:id="@+id/tvDataNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Tidak Ditemukan"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tambah Data Pasien"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/dark"/>
+
+        <Button
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tambah"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:id="@+id/btnTambah"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnTambah"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_data"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
