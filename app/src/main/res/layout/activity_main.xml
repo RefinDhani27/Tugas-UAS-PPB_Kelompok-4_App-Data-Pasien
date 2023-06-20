@@ -41,7 +41,7 @@
                 android:id="@+id/tv_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Di Aplikasi Kelola Pasien."
+                android:text="Di Aplikasi DataMedic."
                 android:textSize="17sp"
                 android:textColor="@color/dark"
                 android:textStyle="bold"
